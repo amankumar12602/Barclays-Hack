@@ -1,0 +1,21 @@
+package com.commerce.backend.model.event;
+
+
+import com.commerce.backend.model.entity.User;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.context.ApplicationEvent;
+
+@Getter
+@Setter
+public class OnPasswordForgotRequestEvent extends ApplicationEvent {
+
+	public OnPasswordForgotRequestEvent(Object source) {
+		super(source);
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3065424767818680083L;}

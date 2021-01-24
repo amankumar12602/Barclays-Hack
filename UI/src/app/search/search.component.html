@@ -1,0 +1,35 @@
+<div class="search container">
+    <div class="title">
+        <h3>Search Results</h3>
+        <p><span class="highlight">{{products.length}}</span> result<span *ngIf="products.length > 1">s</span> found for the search for
+            <span class="highlight">{{keyword}}</span>
+        </p>
+    </div>
+
+
+    <div class="col-6 col-sm-6 col-md-6">
+        <div *ngFor="let product of products" class="search-result ">
+            <div class="search-card col-md-3">
+                <a routerLink="/detail/{{product.bookID}}">
+                    <img src="https://s3-ap-southeast-1.amazonaws.com/he-public-data/blue-book-hic09def7.png" alt="{{product.title}}">
+                    <hr>
+                    <p class="product-name">{{product.title}}</p>
+                    <p class="product-detail-info">{{product.authors}}</p>
+                    <p class="product-detail-info"> Rs {{product.price}}</p>
+
+
+                    <div class="product-color" [ngStyle]="{'background-color': black}">&#9733; {{product.average_rating}}</div>
+
+
+
+
+
+
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+    <hr *ngIf="!canFetch">
+</div>
