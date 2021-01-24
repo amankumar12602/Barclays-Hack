@@ -1,5 +1,0 @@
-package com.commerce.backend.dao;
-
-public class TransactionDao {
-
-}
